@@ -7,7 +7,7 @@ run()
 
 function run() {
   if (process.argv[2] === 'help')
-    return console.error('Usage: xml-to-json <source>')
+    return console.error('Usage: xml-json <source>')
   var input = getStream(process.argv[2])
 
   var converter = convert(function(err, json) {

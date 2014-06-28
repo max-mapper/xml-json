@@ -1,22 +1,22 @@
-# xml-to-json
+# xml-json
 
 convert xml to json on the command line. not streaming, pure javascript
 
-[![NPM](https://nodei.co/npm/xml-to-json.png?global=true)](https://nodei.co/npm/xml-to-json/)
+[![NPM](https://nodei.co/npm/xml-json.png?global=true)](https://nodei.co/npm/xml-json/)
 
 ## usage
 
 ```
-npm install xml-to-json -g
-xml-to-json <file>
+npm install xml-json -g
+xml-json <file>
 ```
 
-or `cat something.xml | xml-to-json`
+or `cat something.xml | xml-json`
 
 ## example
 
 ```
-curl "http://webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=actransit" | xml-to-json
+curl "http://webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=actransit" | xml-json
 {
   "body": {
     "$": {
