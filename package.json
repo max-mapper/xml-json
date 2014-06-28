@@ -1,0 +1,27 @@
+{
+  "name": "xml-to-json",
+  "version": "1.0.0",
+  "bin": {
+    "xml-to-json": "cli.js"
+  },
+  "description": "convert xml to json on the command line. not streaming, pure javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "dependencies": {
+    "concat-stream": "^1.4.6",
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/xml-to-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/xml-to-json/issues"
+  },
+  "homepage": "https://github.com/maxogden/xml-to-json"
+}
