@@ -13,8 +13,11 @@
   "license": "BSD",
   "dependencies": {
     "extend": "^1.3.0",
+    "ldjson-stream": "^1.1.0",
     "minimist": "^0.2.0",
-    "pumpify": "^1.2.1"
+    "pumpify": "^1.2.1",
+    "xml-nodes": "^0.1.2",
+    "xml-objects": "0.0.1"
   },
   "devDependencies": {},
   "repository": {
