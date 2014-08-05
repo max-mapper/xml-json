@@ -1,58 +1,26 @@
 # xml-json
 
-convert xml to json on the command line. not streaming, pure javascript
+convert xml to json on the command line, streaming and pure JS. extracts all matched xml elements by node name and stream them out at line delimited JSON. can only match one node name at a time.
 
 [![NPM](https://nodei.co/npm/xml-json.png?global=true)](https://nodei.co/npm/xml-json/)
 
 ## usage
 
+you must specify both a input stream and a xml node filter. conversion of all input xml is not supported at this time. all nodes that match your filter node name will be returned one at a time as JSON.
+
 ```
 npm install xml-json -g
-xml-json <file>
+xml-json <file> <xml node name>
 ```
 
-or `cat something.xml | xml-json`
+or `cat something.xml | xml-json <xml node name>`
 
-## example
+## examples
 
+```BASH
+curl "http://news.yahoo.com/rss/entertainment" | xml-json item
 ```
-curl "http://webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=actransit" | xml-json
-{
-  "body": {
-    "$": {
-      "copyright": "All data copyright AC Transit 2014."
-    },
-    "Error": [
-      {
-        "_": "\n  last time \"t\" parameter must be specified in query string\n",
-        "$": {
-          "shouldRetry": "false"
-        }
-      }
-    ],
-    "vehicle": [
-      {
-        "$": {
-          "id": "5005",
-          "routeTag": "31",
-          "dirTag": "31_51_0",
-          "lat": "37.8046264",
-          "lon": "-122.2770156",
-          "secsSinceReport": "51",
-          "predictable": "true",
-          "heading": "206",
-          "speedKmHr": "0"
-        }
-      },
-      // etc
-    ],
-    "lastTime": [
-      {
-        "$": {
-          "time": "1403999101266"
-        }
-      }
-    ]
-  }
-}
+
+```BASH
+xml-json data.xml entry
 ```
